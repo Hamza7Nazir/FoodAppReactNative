@@ -19,7 +19,7 @@ export default () => {
         setResults(response.data.businesses)
     }
     catch (err){
-       setErrorMessage('ohhh')
+       setErrorMessage('Oops Something went wrong')
     }
     }
 
