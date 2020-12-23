@@ -5,6 +5,9 @@ import { withNavigation } from 'react-navigation'; // without using props to pas
 
 const ResultsList = ({title, results, navigation}) =>{
 
+    if(!results.length){
+        return null;
+    }
     return (
         <View>
             <Text style={style.title}>{title}</Text>
