@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import ResultDetails from "./ResultDetails";
-import withNavigation from "react-navigation"; // without using props to pass on navigation property
+import { withNavigation } from 'react-navigation'; // without using props to pass on navigation property
 
 const ResultsList = ({title, results, navigation}) =>{
 
@@ -15,9 +15,9 @@ const ResultsList = ({title, results, navigation}) =>{
                 keyExtractor = {(results) => results.id}
 
                 renderItem= {({item}) => {
-                    return (
+                    return (// moving to result show screen 
                         <TouchableOpacity 
-                            onPress= {()=>navigation.navigate('ResultsShow', {id: item.id})}>   
+                            onPress= {()=>navigation.navigate('Result', {id: item.id})}>   
                             <ResultDetails result = {item}/> 
                         </TouchableOpacity>)// -----------------------------------------second argument is the aditional information so we can know which item was clicked
                 }}

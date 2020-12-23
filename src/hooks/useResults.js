@@ -15,7 +15,7 @@ export default () => {
                 term: initialSearchVal,
                 location: 'san jose'
             }
-        });
+        }); 
         setResults(response.data.businesses)
     }
     catch (err){
